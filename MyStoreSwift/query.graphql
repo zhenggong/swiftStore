@@ -1,0 +1,30 @@
+
+query Users {
+users {
+id
+name
+}
+}
+
+mutation Micropost($content: String!, $picture: String!) {
+createMicropost(input: {
+userId: 1
+content: $content
+picture: $picture
+})
+
+{
+micropost {
+id
+content
+picture
+}
+}
+}
+
+query Microposts {
+microposts {
+content
+picture
+}
+}
